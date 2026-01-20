@@ -1,7 +1,7 @@
 # 🧪 Plano de Testes Funcionais - Gran Backstage
 
 **Projeto:** Gran Backstage - Automação de Estúdio  
-**Responsável:** [Seu Nome]  
+**Responsável:** [Lucas F. Silva]  
 **Tipo de Teste:** Manual / Funcional / Exploratório  
 **Ambiente:** Google Chrome (Latest) / Windows 10/11
 
@@ -13,8 +13,8 @@
 | ID | Cenário de Teste | Passos para Reprodução | Dados de Entrada | Resultado Esperado | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **LOG-01** | Login com Sucesso | 1. Acessar tela de bloqueio.<br>2. Inserir e-mail e senha válidos.<br>3. Clicar em "Iniciar Sessão". | E-mail: `admin@gran.com`<br>Senha: `123456` | O sistema deve remover a tela de bloqueio, exibir o layout principal e carregar o nome do usuário na sidebar. | ✅ Pass |
-| **LOG-02** | Login com Senha Inválida | 1. Inserir e-mail válido.<br>2. Inserir senha incorreta.<br>3. Clicar em "Iniciar Sessão". | Senha: `errada` | O sistema deve exibir mensagem de erro "Acesso negado" e manter a tela bloqueada. | ⬜ Pendente |
-| **LOG-03** | Validação de Campos Vazios | 1. Deixar campos em branco.<br>2. Clicar em "Iniciar Sessão". | N/A | O sistema deve exibir alerta visual ou mensagem "Preencha e-mail e senha". | ⬜ Pendente |
+| **LOG-02** | Login com Senha Inválida | 1. Inserir e-mail válido.<br>2. Inserir senha incorreta.<br>3. Clicar em "Iniciar Sessão". | Senha: `errada` | O sistema deve exibir mensagem de erro "Acesso negado" e manter a tela bloqueada. | ✅ Pass |
+| **LOG-03** | Validação de Campos Vazios | 1. Deixar campos em branco.<br>2. Clicar em "Iniciar Sessão". | N/A | O sistema deve exibir alerta visual ou mensagem "Preencha e-mail e senha". | ✅ Pass |
 
 ---
 
