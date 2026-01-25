@@ -23,13 +23,13 @@
 
 | ID | Cenário de Teste | Passos para Reprodução | Dados de Entrada | Resultado Esperado | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **MSG-01** | Validação de Professor | 1. No campo Grade, colar texto com nome em minúsculo.<br>2. Aguardar verificação automática. | Grade: `joão silva 10h` | O sistema deve reconhecer "João Silva" no banco de dados, ignorar maiúsculas/minúsculas e exibir "✔ Contato: João Silva" em verde. | ⬜ Pendente |
-| **MSG-02** | Professor Não Cadastrado | 1. Colar grade com nome inexistente. | Grade: `Professor X 10h` | O sistema deve exibir feedback "Professor não identificado" e não liberar botão de WhatsApp no card final. | ⬜ Pendente |
-| **MSG-03** | Validação de Link do Drive | 1. Preencher todos os campos exceto Drive.<br>2. Clicar em "Gerar". | Drive: `(vazio)` | O sistema deve exibir Toast de erro, borda vermelha no campo Drive e **não** gerar a mensagem. | ⬜ Pendente |
-| **MSG-04** | Validação de Domínio do Drive | 1. Inserir link que não seja do Google Drive.<br>2. Clicar em "Gerar". | Drive: `youtube.com` | O sistema deve bloquear e avisar "Insira uma URL do Google Drive". | ⬜ Pendente |
-| **MSG-05** | Obrigatoriedade de Print | 1. Selecionar aba "Padrão".<br>2. Não selecionar arquivo de imagem.<br>3. Clicar em "Gerar". | Arquivo: `null` | O sistema deve exibir erro "O Print da OS é obrigatório" e destacar o botão de upload em vermelho. | ⬜ Pendente |
-| **MSG-06** | Isenção de Print (Pós-Prova) | 1. Selecionar aba "Pós-Prova".<br>2. Verificar se campo de upload sumiu.<br>3. Clicar em "Gerar" sem imagem. | Modo: `PosProva` | O campo de upload deve estar oculto. O sistema deve gerar a mensagem com sucesso sem exigir imagem. | ⬜ Pendente |
-| **MSG-07** | Chave de Teste vs Aula | 1. Clicar em "Chave de Teste".<br>2. Gerar mensagem. | Tipo: `Teste` | No texto final gerado, deve aparecer escrito "Chave de teste:" ao invés de "Chave:". | ⬜ Pendente |
+| **MSG-01** | Validação de Professor | 1. No campo Grade, colar texto com nome em minúsculo.<br>2. Aguardar verificação automática. | Grade: `joão silva 10h` | O sistema deve reconhecer "João Silva" no banco de dados, ignorar maiúsculas/minúsculas e exibir "✔ Contato: João Silva" em verde. | ✅ Pass |
+| **MSG-02** | Professor Não Cadastrado | 1. Colar grade com nome inexistente. | Grade: `Professor X 10h` | O sistema deve exibir feedback "✖ Professor inexistente no sistema" e não liberar botão de WhatsApp no card final. | ✅ Pass |
+| **MSG-03** | Validação de Link do Drive | 1. Preencher todos os campos exceto Drive.<br>2. Clicar em "Gerar". | Drive: `(vazio)` | O sistema deve exibir Toast de erro "O Link do Drive é obrigatório e deve ser Google Drive.", borda vermelha no campo Drive e **não** gerar a mensagem. | ✅ Pass |
+| **MSG-04** | Validação de Domínio do Drive | 1. Inserir link que não seja do Google Drive.<br>2. Clicar em "Gerar". | Drive: `youtube.com` | O sistema deve bloquear e avisar "O Link do Drive é obrigatório e deve ser Google Drive.". | ✅ Pass |
+| **MSG-05** | Obrigatoriedade de Print | 1. Selecionar aba "Padrão".<br>2. Não selecionar arquivo de imagem.<br>3. Clicar em "Gerar". | Arquivo: `null` | O sistema deve exibir erro "⚠️ O Print da OS é obrigatório!" e destacar o botão de upload em vermelho. | ✅ Pass |
+| **MSG-06** | Isenção de Print (Pós-Prova) | 1. Selecionar aba "Pós-Prova".<br>2. Verificar se campo de upload sumiu.<br>3. Clicar em "Gerar" sem imagem. | Modo: `PosProva` | O campo de upload deve estar oculto. O sistema deve gerar a mensagem com sucesso sem exigir imagem. | ✅ Pass |
+| **MSG-07** | Chave de Teste vs Aula | 1. Clicar em "Chave de Teste".<br>2. Gerar mensagem. | Tipo: `Teste` | No texto final gerado, deve aparecer escrito "Chave de teste:" ao invés de "Chave:". | ✅ Pass |
 
 ---
 
